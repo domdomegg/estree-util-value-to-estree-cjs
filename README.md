@@ -1,24 +1,23 @@
-# typescript-library-template
+# estree-util-value-to-estree-cjs
 
-Personal template for creating TypeScript libraries.
+A wrapper of remcohaszing's brilliant [`estree-util-value-to-estree`](https://github.com/remcohaszing/estree-util-value-to-estree), packaged to be imported synchronously into CJS projects.
 
-## Quick start
+In most scenarios you should NOT use this package. Instead, consider:
 
-1. If it should be published to NPM, add the `NPM_TOKEN` secret (make sure not to leave a trailing newline in there!). Otherwise, add `"private": true` in `package.json`.
-2. Update the package name, description and repo URL in `package.json`
-3. Enable 'Allow GitHub Actions to create and approve pull requests' in _Settings > Actions (General) > `Workflow permissions_
-4. Add the repo to the [file sync automation rules](https://github.com/domdomegg/domdomegg/blob/master/.github/workflows/repo-file-sync.yaml)
-5. Update the README, using the template commented out below
-
-<!--
-
-# TODO: name of library
-
-TODO: A short description of what the library does, explaining why people might want to use it.
+- Using ESM, and importing [`estree-util-value-to-estree`](https://github.com/remcohaszing/estree-util-value-to-estree) directly
+- Using [dynamic imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import), and importing [`estree-util-value-to-estree`](https://github.com/remcohaszing/estree-util-value-to-estree) directly
 
 ## Usage
 
-TODO: usage instructions
+Use this where you'd otherwise use estree-util-value-to-estree, for example:
+
+```ts
+import { valueToEstree } from 'estree-util-value-to-estree-cjs';
+
+export const expression = valueToEstree({
+  name: "Adam"
+})
+```
 
 ## Contributing
 
@@ -39,5 +38,3 @@ To release:
 1. Use `npm version <major | minor | patch>` to bump the version
 2. Run `git push --follow-tags` to push with tags
 3. Wait for GitHub Actions to publish to the NPM registry.
-
--->

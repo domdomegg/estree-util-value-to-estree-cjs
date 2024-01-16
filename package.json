@@ -1,12 +1,12 @@
 {
-  "name": "typescript-library-template",
+  "name": "estree-util-value-to-estree-cjs",
   "version": "0.0.0",
   "description": "Template for creating TypeScript libraries",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/domdomegg/typescript-library-template.git"
+    "url": "https://github.com/domdomegg/estree-util-value-to-estree-cjs.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,20 +14,20 @@
     "dist"
   ],
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest --watch",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "clean": "rm -rf dist",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "rollup --config rollup.config.js",
     "prepublishOnly": "npm run clean && npm run build"
   },
+  "dependencies": {
+    "estree-util-value-to-estree": "^1.0.0 || ^2.0.0 || ^3.0.0"
+  },
   "devDependencies": {
-    "@tsconfig/node-lts": "^20.1.0",
-    "@tsconfig/strictest": "^2.0.2",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "eslint": "^8.56.0",
     "eslint-config-domdomegg": "^1.2.3",
-    "typescript": "^5.3.3",
-    "vitest": "^1.0.4"
+    "rollup": "^4.9.5",
+    "rollup-plugin-copy": "^3.5.0"
   },
   "eslintConfig": {
     "extends": [
