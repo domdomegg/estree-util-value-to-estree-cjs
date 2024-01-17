@@ -1,7 +1,7 @@
 {
   "name": "estree-util-value-to-estree-cjs",
-  "version": "0.0.0",
-  "description": "Template for creating TypeScript libraries",
+  "version": "3.0.1",
+  "description": "CommonJS packaged version of estree-util-value-to-estree",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
   "repository": {
@@ -14,18 +14,17 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint --ext .js,.jsx .",
     "clean": "rm -rf dist",
+    "test": "node check-version.js",
     "build": "rollup --config rollup.config.js",
     "prepublishOnly": "npm run clean && npm run build"
-  },
-  "dependencies": {
-    "estree-util-value-to-estree": "^1.0.0 || ^2.0.0 || ^3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
     "eslint": "^8.56.0",
     "eslint-config-domdomegg": "^1.2.3",
+    "estree-util-value-to-estree": "3.0.1",
     "rollup": "^4.9.5",
     "rollup-plugin-copy": "^3.5.0"
   },

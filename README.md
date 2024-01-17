@@ -9,12 +9,12 @@ In most scenarios you should NOT use this package. Instead, consider:
 
 ## Usage
 
-Use this where you'd otherwise use estree-util-value-to-estree, for example:
+Use this where you'd otherwise use `estree-util-value-to-estree`, for example:
 
-```ts
-import { valueToEstree } from 'estree-util-value-to-estree-cjs';
+```js
+const { valueToEstree } = require('estree-util-value-to-estree-cjs');
 
-export const expression = valueToEstree({
+module.exports = valueToEstree({
   name: "Adam"
 })
 ```
@@ -31,10 +31,11 @@ Pull requests are welcomed on GitHub! To get started:
 
 ## Releases
 
-Versions follow the [semantic versioning spec](https://semver.org/).
+Versions follow the versioning of `estree-util-value-to-estree`.
 
 To release:
 
-1. Use `npm version <major | minor | patch>` to bump the version
-2. Run `git push --follow-tags` to push with tags
-3. Wait for GitHub Actions to publish to the NPM registry.
+1. Use `npm version <version> --allow-same-version` to bump the version
+2. Make sure `estree-util-value-to-estree`'s version matches (`npm test` will check this for you)
+3. Run `git push --follow-tags` to push with tags
+4. Wait for GitHub Actions to publish to the NPM registry.
