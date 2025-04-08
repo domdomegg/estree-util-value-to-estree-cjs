@@ -24,7 +24,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "eslint": "^8.56.0",
     "eslint-config-domdomegg": "^1.2.3",
-    "estree-util-value-to-estree": "3.0.1",
+    "estree-util-value-to-estree": "3.3.3",
     "rollup": "^4.9.5",
     "rollup-plugin-copy": "^3.5.0"
   },
