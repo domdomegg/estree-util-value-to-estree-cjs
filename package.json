@@ -1,6 +1,6 @@
 {
   "name": "estree-util-value-to-estree-cjs",
-  "version": "3.0.1",
+  "version": "3.3.3",
   "description": "CommonJS packaged version of estree-util-value-to-estree",
   "license": "MIT",
   "author": "Adam Jones (domdomegg)",
