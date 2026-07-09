@@ -14,7 +14,7 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint --ext .js,.jsx .",
+    "lint": "eslint",
     "clean": "rm -rf dist",
     "test": "node check-version.js",
     "build": "rollup --config rollup.config.js",
@@ -22,15 +22,11 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "eslint": "^8.56.0",
-    "eslint-config-domdomegg": "^1.2.3",
+    "eslint": "^9.0.0",
+    "eslint-config-domdomegg": "^2.0.9",
     "estree-util-value-to-estree": "3.3.3",
     "rollup": "^4.9.5",
-    "rollup-plugin-copy": "^3.5.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint-config-domdomegg"
-    ]
+    "rollup-plugin-copy": "^3.5.0",
+    "typescript": "^5.7.3"
   }
 }
